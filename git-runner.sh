@@ -6,7 +6,7 @@ tag=$2
 dt=$(date '+%d%m%Y_%H%M%S');
 repo_url='https://github.com/abdullah4191/testScriptForAngular.git';
 
-base_folder_name="repo_"$branch"_"$dt;
+base_folder_name="repo_"$branch"_"$tag"_"$dt;
 echo "base folder name: "$base_folder_name;
 if [ -d "$base_folder_name" ]; then rm -Rf $base_folder_name; fi
 mkdir $base_folder_name;
@@ -27,9 +27,9 @@ cd ..
 #backend TBD
 echo "Processing backend";
 
-cd ..
 
-#git tag -a $tag -m "$tag"
-#git push origin $tag
+pwd
+git tag -a $tag -m "$tag"
+git push origin $tag
 
 #rm -fd repo-$branch
