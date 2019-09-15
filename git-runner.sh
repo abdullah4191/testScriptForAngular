@@ -4,9 +4,9 @@
 branch=$1
 tag=$2
 dt=$(date '+%d%m%Y_%H%M%S');
-repo_url='https://iliha1-tools-git.euro.apple.com/scm/fg/flash-gordon.git';
+repo_url='https://github.com/abdullah4191/testScriptForAngular.git';
 
-base_folder_name="repo_"$branch_$dt;
+base_folder_name="repo_"$branch"_"$dt;
 echo "base folder name: "$base_folder_name;
 if [ -d "$base_folder_name" ]; then rm -Rf $base_folder_name; fi
 mkdir $base_folder_name;
